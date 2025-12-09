@@ -15,7 +15,7 @@ This core module is designed as a reference verification tool for CubeSat Attitu
 
 ```matlab
 % Load coefficients
-load('data/igrf13coeffs.mat', 'C_nm');
+load "igrf13coeffs.mat"
 
 % Define position (e.g., ISTNanoSat Orbit)
 height = 400000;    % 400 km
