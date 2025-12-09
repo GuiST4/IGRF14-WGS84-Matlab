@@ -1,6 +1,6 @@
 # IGRF-14 Geomagnetic Field Model (WGS84)
 
-A high-fidelity MATLAB implementation of the International Geomagnetic Reference Field (IGRF-13) model for Low Earth Orbit (LEO) applications. 
+A high-fidelity MATLAB implementation of the International Geomagnetic Reference Field (IGRF-14) model for Low Earth Orbit (LEO) applications. 
 
 This core module is designed as a reference verification tool for CubeSat Attitude Determination and Control Systems (ADCS).
 
