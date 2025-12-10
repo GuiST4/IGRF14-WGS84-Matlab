@@ -18,7 +18,7 @@ load('../data/igrf14coeffs.mat', 'C_nm');
 latitude_deg = 40;
 longitude_deg = 60;
 height_m = 500000;
-year = 2025;
+year = 2025.0;
 
 % Maximum degree of Spherical Harmonic aproximation
 N = 13;

@@ -143,7 +143,7 @@ void igrf_compute(const igrf_input_t *in, igrf_output_t *out)
 
     for (int n = 1; n <= IGRF_N; n++)
     {
-        scale = r_ratio; // (a/r)^(n+2)
+        scale *= r_ratio; // (a/r)^(n+2)
 
         for (int m = 0; m <= n; m++)
         {
@@ -167,16 +167,13 @@ void igrf_compute(const igrf_input_t *in, igrf_output_t *out)
     // Vector recovery
     float Br = sumR;
     float Bt = -sumT;
+    float Bl = 0.0f;
 
     // Singularity check
     // Physics breaks here, so we force it to 0.
     if (fabsf(s_tt) > 1e-5f)
     {
-        float Bl = -sumL / s_tt;
-    }
-    else
-    {
-        float Bl = 0.0f; // You are standing on Santa's house.
+        Bl = -sumL / s_tt;
     }
 
     // Rotate Geocentric to NED
