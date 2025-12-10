@@ -1,0 +1,4 @@
+.vscode/launch.json
+.vscode/tasks.json
+src_c/main.exe
+igrf_test.exe

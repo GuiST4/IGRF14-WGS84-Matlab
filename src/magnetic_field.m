@@ -129,11 +129,7 @@ function [Pnm, dPnm] = compute_Pnm_dPnm(theta, Knm, N)
             elseif m == n - 1
                     Pnm(n+1,m+1) = cos(theta)*Pnm(n,m+1);
             else
-                if m > n - 2
-                    Pnm(n-1,m+1) = 0;
-                else
                 Pnm(n+1,m+1) = cos(theta)*Pnm(n,m+1) - Knm(n+1,m+1)*Pnm(n-1,m+1);
-                end
             end
         end
     end
